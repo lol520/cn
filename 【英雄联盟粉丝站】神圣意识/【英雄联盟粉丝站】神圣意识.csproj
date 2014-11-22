@@ -1,0 +1,3726 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3B7D44FB-7D26-4033-B1D6-F726627D2B94}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAwareness</RootNamespace>
+    <AssemblyName>SAwareness</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PreBuildEvent />
+    <OutputPath>bin\Release</OutputPath>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>veröffentlichen\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SAwareness.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Evade, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\LeagueSharp\\System\Evade.dll</HintPath>
+    </Reference>
+    <Reference Include="Evade.1.0.0.1.Fakes">
+      <HintPath>E:\LeagueSharp\\System\Evade.1.0.0.1.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="LeagueSharp">
+      <HintPath>E:\LeagueSharp\\System\LeagueSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LeagueSharp.Common, Version=1.0.0.2, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\LeagueSharp\\System\LeagueSharp.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="SharpDX, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\LeagueSharp\\System\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D9, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\LeagueSharp\\System\SharpDX.Direct3D9.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Toolkit">
+      <HintPath>E:\LeagueSharp\\System\SharpDX.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Toolkit.Graphics">
+      <HintPath>E:\LeagueSharp\\System\SharpDX.Toolkit.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activator\Activator.cs" />
+    <Compile Include="Activator\AutoAntiSlow.cs" />
+    <Compile Include="Activator\AutoHeal.cs" />
+    <Compile Include="Activator\AutoQSS.cs" />
+    <Compile Include="Activator\AutoUlt.cs" />
+    <Compile Include="AutoLevler.cs" />
+    <Compile Include="Activator\AutoPot.cs" />
+    <Compile Include="Activator\AutoShield.cs" />
+    <Compile Include="Activator\AutoSmite.cs" />
+    <Compile Include="Database.cs" />
+    <Compile Include="Detector.cs" />
+    <Compile Include="Activator\EmbeddedAssembly.cs" />
+    <Compile Include="FlashJuke.cs" />
+    <Compile Include="Ganks.cs" />
+    <Compile Include="Health.cs" />
+    <Compile Include="Misc.cs" />
+    <Compile Include="MoveToMouse.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Ranges.cs" />
+    <Compile Include="SafeMovement.cs" />
+    <Compile Include="SkinChanger.cs" />
+    <Compile Include="Spectator\Blowfish.cs" />
+    <Compile Include="Spectator\Packet.cs" />
+    <Compile Include="Spectator\SpectatorDecoder.cs" />
+    <Compile Include="Spectator\SpectatorDownloader.cs" />
+    <Compile Include="Spectator\SpecUtils.cs" />
+    <Compile Include="SurrenderVote.cs" />
+    <Compile Include="Timers.cs" />
+    <Compile Include="Trackers.cs" />
+    <Compile Include="Updater.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="Wards.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Fakes Include="Fakes\Evade.fakes" />
+    <None Include="Resources\CHAMP\Aatrox.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Ahri.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Akali.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Alistar.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Amumu.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Anivia.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Annie.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Ashe.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Blitzcrank.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Brand.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Braum.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Caitlyn.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Cassiopeia.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Chogath.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Corki.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Darius.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Diana.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Draven.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\DrMundo.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Elise.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Evelynn.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Ezreal.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\FiddleSticks.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Fiora.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Fizz.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Galio.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Gangplank.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Garen.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Gnar.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Gragas.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Graves.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Hecarim.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Heimerdinger.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Irelia.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Janna.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\JarvanIV.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Jax.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Jayce.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Jinx.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Karma.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Karthus.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Kassadin.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Katarina.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Kayle.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Kennen.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Khazix.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\KogMaw.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Leblanc.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\LeeSin.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Leona.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Lissandra.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Lucian.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Lulu.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Lux.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Malphite.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Malzahar.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Maokai.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\MasterYi.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\MissFortune.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\MonkeyKing.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Mordekaiser.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Morgana.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Nami.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Nasus.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Nautilus.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Nidalee.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Nocturne.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Nunu.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Olaf.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Orianna.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Pantheon.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Poppy.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Quinn.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Rammus.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Renekton.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Rengar.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Riven.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Rumble.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Ryze.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Sejuani.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Shaco.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Shen.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Shyvana.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Singed.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Sion.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Sivir.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Skarner.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Sona.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Soraka.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Swain.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Syndra.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Talon.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Taric.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Teemo.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Thresh.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Tristana.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Trundle.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Tryndamere.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\TwistedFate.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Twitch.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Udyr.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Urgot.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Varus.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Vayne.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Veigar.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Velkoz.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Vi.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Viktor.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Vladimir.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Volibear.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Warwick.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Xerath.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\XinZhao.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Yasuo.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Yorick.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Zac.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Zed.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Ziggs.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Zilean.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Zyra.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EXT\BarBackground.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EXT\HealthBar.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EXT\ItemSlotEmpty.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EXT\ManaBar.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EXT\RecallBar.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1001.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1004.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1006.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1011.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1018.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1026.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1027.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1028.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1029.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1031.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1033.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1036.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1037.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1038.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1039.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1042.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1043.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1051.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1052.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1053.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1054.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1055.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1056.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1057.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1058.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1062.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1063.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1074.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1075.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1076.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\1080.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\2003.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\2004.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\2009.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\2010.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\2037.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\2039.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\2040.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\2041.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\2043.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\2044.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\2045.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\2047.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\2048.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\2049.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\2050.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\2051.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\2052.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3001.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3003.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3004.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3005.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3006.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3007.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3008.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3009.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3010.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3020.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3022.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3023.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3024.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3025.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3026.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3027.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3028.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3029.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3031.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3035.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3040.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3041.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3042.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3043.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3044.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3046.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3047.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3048.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3050.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3056.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3057.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3060.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3065.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3067.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3068.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3069.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3070.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3071.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3072.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3073.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3074.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3075.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3077.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3078.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3082.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3083.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3084.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3085.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3086.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3087.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3089.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3090.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3091.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3092.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3093.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3096.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3097.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3098.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3100.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3101.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3102.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3104.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3105.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3106.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3108.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3110.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3111.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3112.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3113.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3114.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3115.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3116.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3117.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3122.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3123.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3124.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3128.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3131.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3134.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3135.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3136.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3137.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3139.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3140.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3141.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3142.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3143.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3144.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3145.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3146.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3151.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3152.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3153.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3154.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3155.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3156.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3157.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3158.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3159.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3160.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3165.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3166.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3167.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3168.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3169.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3170.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3171.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3172.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3174.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3175.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3180.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3181.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3184.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3185.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3187.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3188.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3190.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3191.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3196.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3197.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3198.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3200.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3204.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3205.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3206.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3207.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3208.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3209.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3211.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3222.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3250.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3251.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3252.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3253.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3254.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3255.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3256.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3257.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3258.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3259.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3260.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3261.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3262.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3263.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3264.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3265.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3266.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3267.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3268.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3269.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3270.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3271.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3272.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3273.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3274.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3275.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3276.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3277.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3278.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3279.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3280.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3281.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3282.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3283.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3284.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3290.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3301.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3302.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3303.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3340.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3341.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3342.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3345.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3361.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3362.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3363.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3364.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3401.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3405.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3406.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3407.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3408.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3409.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3410.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3411.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3412.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3413.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3414.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3415.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3416.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3417.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3418.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3419.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3420.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3421.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3422.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3450.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3451.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3452.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3453.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3454.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3455.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3460.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3504.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS\3508.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Aatrox_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Ahri_SoulEater.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\AkaliTwinDisciplines.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\AlZahar_SummonVoidling.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Annie_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Armordillo_ScavengeArmor.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Armsmaster_MasterOfArms.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Ashe_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Blitzcrank_ManaBarrier.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\BrandBlaze.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Braum_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Caitlyn_Headshot.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Cardmaster_SealFate.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Cassiopeia_DeadlyCadence.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\ChemicalMan_EmpoweredBulwark.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Chronokeeper_Slow.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Corki_RapidReload.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Cryophoenix_Rebirth.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Darius_Icon_Hemorrhage.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\DarkChampion_Fury.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Diana_Passive_LunarBlade.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Draven_passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\DrMundo_AdrenalineRush2.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\ElisePassive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Evelynn_ShadowWalk.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Ezreal_RisingSpellForce.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\FallenAngel_Empathize.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Fiddlesticks_Paranoia.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Fiora_Duelist.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\FizzPassive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Galio_RunicSkin.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Garen_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\GemKnight_Gemcraft.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\GragasPassiveHeal.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\GravesTrueGrit.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\GreenTerror_TailSpike.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Hecarim_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Heimerdinger_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Irelia_IonianFervor.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Janna_Tailwind.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\JarvanIV_MartialCadence.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Jayce_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Jester_CarefulStrikes.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Jinx_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Karma_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Karthus_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Katarina_Voracity.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Kayle_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Kennen_MarkOfStorm.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Khazix_P.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\KogMaw_IcathianSurprise.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\LeblancMirrorImage.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\LeeSinPassive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\LeonaSunlight.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Lich_Defied.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Lissandra_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Lucian_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Lulu_PixFaerieCompanion.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\LuxIlluminatingFraulein.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Malphite_GraniteShield.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Maokai_SapMagic.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\MasterYi_Passive1.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Minotaur_ColossalStrength.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\MissFortune_Strut.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\MonkeyKingStoneSkin.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Mordekaiser_IronMan.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\NamiPassive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Nasus_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Nautilus_StaggeringBlow.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Nidalee_OnTheProwl.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Nidalee_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Nocturne_UmbraBlades.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Olaf_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\OriannaPassive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Pantheon_AOZ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Pirate_GrogSoakedBlade.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Poppy_ValiantFighter.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Quinn_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Renekton_Predator.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Rengar_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\RivenRunicBlades.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Rumble_Junkyard Titan1.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Ryze_SpellStrike.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\SadMummy_CorpseExplosion.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Sejuani_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\shadowninja_P.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Shen_KiStrike.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\ShyvanaReinforcedScales.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Sion_FeelNoPain.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Sivir_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Skarner_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\SkarnerEnergize.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Sona_Passive_Charged.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Sona_PowerChordCharged.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Soraka_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\SwainCarrionRenewal.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\SyndraPassive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\TalonMercy.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Teemo_Camouflage.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Thresh_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Tristana_DrawABead.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Trundle_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Tryndamere_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Twitch_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Udyr_MonkeysAgility.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Urgot_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\VarusPassive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Vayne_NightHunter.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Veigar_Entropy.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Velkoz_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\ViktorEvolvingTechnology.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\ViPassive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Vladimir_BloodGorged.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Voidwalker_Netherburn.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\VolibearPassive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Warwick_InnerHunger.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Xerath_Passive1.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\XinZhao_TirelessWarrior.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Yasuo_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Yeti_FrostNova.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\YorickUnholyCovenant.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\ZacPassive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\ZiggsPassiveReady.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\ZyraP.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AatroxE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AatroxQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AatroxR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AatroxW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AbsoluteZero.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AhriFoxFire.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AhriOrbofDeception.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AhriSeduce.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AhriTumble.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AkaliMota.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AkaliShadowDance.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AkaliShadowSwipe.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AkaliSmokeBomb.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AlphaStrike.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AlZaharCalloftheVoid.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AlZaharMaleficVisions.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AlZaharNetherGrasp.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AlZaharNullZone.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AsheSpiritOfTheHawk.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AspectOfTheCougar.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AspectOfTheCougar0.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AstralBlessing.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AuraofDespair.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\BandageToss.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\BantamTrap.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\BlackShield.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\BlindingDart.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\BlindMonkEOne.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\BlindMonkEOne0.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\BlindMonkQOne.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\BlindMonkQOne0.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\BlindMonkRKick.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\BlindMonkWOne.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\BloodBoil.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Bloodlust.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\BloodScent.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\BrandBlaze.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\BrandConflagration.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\BrandFissure.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\BrandWildfire.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\BraumE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\BraumQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\BraumRWrapper.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\BraumW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\BurningAgony.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Bushwhack.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Bushwhack0.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\BusterShot.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\CaitlynAceintheHole.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\CaitlynEntrapment.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\CaitlynPiltoverPeacemaker.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\CaitlynYordleTrap.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Cannibalism.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\CannonBarrage.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\CardmasterStack.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\CarpetBomb.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\CassiopeiaMiasma.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\CassiopeiaNoxiousBlast.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\CassiopeiaPetrifyingGaze.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\CassiopeiaTwinFang.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ChronoShift.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Consume.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Crowstorm.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\CrypticGaze.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Crystallize.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\CurseoftheSadMummy.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\DariusAxeGrabCone.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\DariusCleave.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\DariusExecute.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\DariusNoxianTacticsONH.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\DarkBindingMissile.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Dazzle.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\DeathsCaressFull.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Deceive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\DefensiveBallCurl.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Defile.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\DesperatePower.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Destiny.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\DetonatingShot.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\DianaArc.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\DianaOrbs.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\DianaTeleport.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\DianaVortex.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Disintegrate.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Drain.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\DravenDoubleShot.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\DravenFury.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\DravenRCast.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\DravenSpinning.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\EliseHumanE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\EliseHumanE0.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\EliseHumanQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\EliseHumanQ0.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\EliseHumanW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\EliseHumanW0.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\EliseR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\EnchantedCrystalArrow.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Enrage.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\EvelynnE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\EvelynnQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\EvelynnR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\EvelynnW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\EyeOfTheStorm.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\EzrealArcaneShift.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\EzrealEssenceFlux.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\EzrealMysticShot.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\EzrealTrueshotBarrage.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\FallenOne.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Feast.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\FeralScream.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\FerociousHowl.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\FiddlesticksDarkWind.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\FioraDance.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\FioraFlurry.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\FioraQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\FioraRiposte.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\FizzJump.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\FizzMarinerDoom.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\FizzPiercingStrike.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\FizzSeastonePassive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\FlashFrost.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Fling.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ForcePulse.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Frostbite.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\FrostShot.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\GalioBulwark.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\GalioIdolOfDurand.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\GalioResoluteSmite.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\GalioRighteousGust.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\GarenE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\garenecancel.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\GarenQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\GarenR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\GarenW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\GGun.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\GlacialStorm.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\GnarE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\GnarQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\GnarR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\GnarW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\GragasE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\GragasQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\GragasR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\GragasW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\GravesChargeShot.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\GravesClusterShot.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\GravesMove.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\GravesSmokeGrenade.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\HallucinateFull.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Headbutt.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\HecarimRamp.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\HecarimRapidSlash.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\HecarimUlt.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\HecarimW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\HeimerdingerE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\HeimerdingerQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\HeimerdingerR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\HeimerdingerW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Highlander.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\HowlingGale.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\HungeringStrike.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\HuntersCall.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\IceBlast.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Imbue.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Incinerate.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\InfectedCleaverMissileCast.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\InfernalGuardian.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\InfernalGuardian0.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\InfiniteDuress.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\InfuseWrapper.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\InsanityPotion.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\IreliaEquilibriumStrike.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\IreliaGatotsu.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\IreliaHitenStyle.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\IreliaTranscendentBlades.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\JackInTheBox.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\JarvanIVCataclysm.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\JarvanIVDemacianStandard.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\JarvanIVDragonStrike.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\JarvanIVGoldenAegis.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\JavelinToss.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\JavelinToss0.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\JaxCounterStrike.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\JaxEmpowerTwo.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\JaxLeapStrike.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\JaxRelentlessAssault.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\JayceStanceHtG.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\JayceStaticField.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\JayceThunderingBlow.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\JayceToTheSkies.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\JinxE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\JinxQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\JinxR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\JinxRWrapper.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\JinxW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\JudicatorDivineBlessing.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\JudicatorIntervention.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\JudicatorReckoning.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\JudicatorRighteousFury.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KarmaMantra.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KarmaQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KarmaSolKimShield.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KarmaSpiritBind.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KarthusDefile.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KarthusFallenOne.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KarthusLayWasteA1.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\karthuslaywastea2.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\karthuslaywastea3.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KarthusWallOfPain.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KatarinaE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KatarinaQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KatarinaR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KatarinaW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KennenBringTheLight.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KennenLightningRush.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KennenShurikenHurlMissile1.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KennenShurikenStorm.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KhazixE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KhazixE0.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KhazixQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KhazixQ0.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KhazixR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KhazixR0.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KhazixW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KhazixW0.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KogMawBioArcaneBarrage.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KogMawLivingArtillery.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KogMawQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\KogMawVoidOoze.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Landslide.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LayWaste.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LeblancChaosOrb.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LeblancMimic.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LeblancMimic0.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LeblancMimic1.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LeblancMimic2.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LeblancSlide.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LeblancSoulShackle.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LeonaShieldOfDaybreak.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LeonaSolarBarrier.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LeonaSolarFlare.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LeonaZenithBlade.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LissandraE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LissandraQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LissandraR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LissandraW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LucianE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LucianQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LucianR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LucianW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LuluE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LuluQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LuluR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LuluW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LuxLightBinding.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LuxLightStrikeKugel.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LuxMaliceCannon.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\LuxPrismaticWave.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\MaokaiDrain3.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\MaokaiSapling2.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\MaokaiTrunkLine.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\MaokaiUnstableGrowth.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Masochism.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Meditate.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\MegaAdhesive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\MissFortuneBulletTime.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\MissFortuneRicochetShot.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\MissFortuneScattershot.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\MissFortuneViciousStrikes.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\MissileBarrage.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\MockingShout.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\MoltenShield.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\MonkeyKingDecoy.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\MonkeyKingDoubleAttack.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\MonkeyKingNimbus.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\MonkeyKingSpinToWin.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\MordekaiserChildrenOfTheGrave.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\MordekaiserCreepingDeathCast.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\MordekaiserMaceOfSpades.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\MordekaiserSyphonOfDestruction.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\MoveQuick.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\NamiE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\NamiQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\NamiR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\NamiW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\NasusE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\NasusQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\NasusR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\NasusW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\NautilusAnchorDrag.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\NautilusGrandLine.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\NautilusPiercingGaze.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\NautilusSplashZone.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\NetherBlade.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\NocturneDuskbringer.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\NocturneParanoia.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\NocturneShroudofDarkness.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\NocturneUnspeakableHorror.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\NullLance.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Obduracy.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\OlafAxeThrowCast.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\OlafFrenziedStrikes.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\OlafRagnarok.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\OlafRecklessStrike.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\OrianaDetonateCommand.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\OrianaDissonanceCommand.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\OrianaIzunaCommand.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\OrianaRedactCommand.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Overdrive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Overload.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\PantheonE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\PantheonQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\PantheonRJump.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\PantheonW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Parley.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\PhosphorusBomb.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\PickACard.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\PoisonTrail.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\PoppyDevastatingBlow.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\PoppyDiplomaticImmunity.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\PoppyHeroicCharge.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\PoppyParagonOfDemacia.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\PowerBall.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\PowerFist.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\PrimalSurge.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\PrimalSurge0.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Pulverize.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\PuncturingTaunt.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\QuinnE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\QuinnQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\QuinnR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\QuinnW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\RaiseMorale.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\RapidFire.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ReapTheWhirlwind.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\RemoveScurvy.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\RenektonCleave.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\RenektonPreExecute.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\RenektonReignOfTheTyrant.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\RenektonSliceAndDice.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\RengarE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\RengarQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\RengarR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\RengarW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Rewind.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\RiftWalk.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\RivenFeint.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\RivenFengShuiEngine.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\RivenMartyr.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\RivenTriCleave.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\RocketGrab.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\RocketJump.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\RumbleCarpetBomb.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\RumbleFlameThrower.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\RumbleGrenade.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\RumbleShield.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\RunePrison.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Rupture.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Sadism.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SeismicShard.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SejuaniArcticAssault.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SejuaniGlacialPrisonStart.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SejuaniNorthernWinds.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SejuaniWintersClaw.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Shatter.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ShenFeint.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ShenShadowDash.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ShenStandUnited.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ShenVorpalStar.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ShyvanaDoubleAttack.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\shyvanadoubleattackdragon.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ShyvanaFireball.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\shyvanafireballdragon2.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\shyvanaimmolatedragon.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ShyvanaImmolationAura.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ShyvanaTransformCast.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SivirE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SivirQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SivirR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SivirW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SkarnerExoskeleton.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SkarnerFracture.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SkarnerImpale.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SkarnerVirulentSlash.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\slashCast.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SonaAriaofPerseverance.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SonaCrescendo.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SonaE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SonaHymnofValor.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SonaQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SonaR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SonaSongofDiscord.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SonaW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SoulShackles.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SowTheWind.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SpellFlux.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Starcall.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\StaticField.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SummonerBarrier.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SummonerBoost.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SummonerClairvoyance.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SummonerDot.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SummonerExhaust.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SummonerFlash.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SummonerHaste.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SummonerHeal.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SummonerMana.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SummonerOdinGarrison.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SummonerRevive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SummonerSmite.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SummonerTeleport.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SwainDecrepify.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SwainMetamorphism.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SwainShadowGrasp.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SwainTorment.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SyndraE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SyndraQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SyndraR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SyndraW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Takedown.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\TalonCutthroat.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\TalonNoxianDiplomacy.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\TalonRake.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\TalonShadowAssault.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Tantrum.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\TaricHammerSmash.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Terrify.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ThreshE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ThreshQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ThreshRPenta.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ThreshW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\TimeBomb.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\TimeWarp.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\TormentedSoil.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ToxicShot.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Tremors2.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\TriumphantRoar.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\TrundleCircle.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\trundledesecrate.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\TrundlePain.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\TrundleTrollSmash.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\TwitchExpunge.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\TwitchFullAutomatic.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\TwitchHideInShadows.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\TwitchVenomCask.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\TwoShivPoison.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\UdyrBearStance.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\UdyrPhoenixStance.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\UdyrTigerStance.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\UdyrTurtleStance.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\UFSlash.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\UndyingRage.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\UrgotHeatseekingMissile.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\UrgotPlasmaGrenade.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\UrgotSwap2.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\UrgotTerrorCapacitorActive2.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VarusE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VarusQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VarusR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VarusW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VayneCondemn.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VayneInquisition.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VayneSilveredBolts.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VayneTumble.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VeigarBalefulStrike.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VeigarDarkMatter.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VeigarEventHorizon.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VeigarPrimordialBurst.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VelkozE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VelkozQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VelkozR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VelkozW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ViE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ViktorChaosStorm.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ViktorDeathRay.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ViktorGravitonField.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ViktorPowerTransfer.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ViQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ViR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ViW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VladimirHemoplague.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VladimirSanguinePool.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VladimirTidesofBlood.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VladimirTransfusion.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VolibearE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VolibearQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VolibearR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VolibearW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Volley.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\VorpalSpikes.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\WallOfPain.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\WildCards.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Wish.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\WujuStyle.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\XenZhaoBattleCry.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\XenZhaoComboTarget.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\XenZhaoParry.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\XenZhaoSweep.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\XerathArcaneBarrage2.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\XerathArcanopulseChargeUp.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\XerathLocusOfPower2.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\XerathMageSpear.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\YasuoDashWrapper.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\YasuoQW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\YasuoRKnockUpComboW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\YasuoWMovingWall.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\YorickDecayed.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\YorickRavenous.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\YorickReviveAlly.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\YorickSpectral.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ZacE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ZacQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ZacR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ZacW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ZedPBAOEDummy.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ZedShadowDash.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ZedShuriken.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ZedUlt.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ZiggsE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ZiggsQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ZiggsR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ZiggsW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ZyraBrambleZone.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ZyraGraspingRoots.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ZyraQFissure.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\ZyraSeed.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUMMONERS\SpellTint.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUMMONERS\SummonerBarrier.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUMMONERS\SummonerBoost.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUMMONERS\SummonerClairvoyance.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUMMONERS\SummonerDot.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUMMONERS\SummonerExhaust.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUMMONERS\SummonerFlash.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUMMONERS\SummonerHaste.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUMMONERS\SummonerHeal.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUMMONERS\SummonerMana.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUMMONERS\SummonerOdinGarrison.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUMMONERS\SummonerRevive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUMMONERS\SummonerSmite.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUMMONERS\SummonerSpellTint.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUMMONERS\SummonerTeleport.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUMMONERS\SummonerTint.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP\Azir.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Azir_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Gnar_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AzirE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AzirQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AzirR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\AzirW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Swipe.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\Pounce.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSIVE\Viktor_Passive.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SorakaE.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SorakaQ.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SorakaR.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\SorakaW.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\DLL\Evade.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Aatrox_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Ahri_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Akali_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Alistar_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Amumu_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Anivia_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Annie_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Ashe_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Azir_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Blitzcrank_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Brand_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Braum_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Caitlyn_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Cassiopeia_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Chogath_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Corki_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Darius_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Diana_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Draven_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\DrMundo_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Elise_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Evelynn_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Ezreal_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\FiddleSticks_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Fiora_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Fizz_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Galio_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Gangplank_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Garen_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Gnar_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Gragas_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Graves_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Hecarim_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Heimerdinger_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Irelia_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Janna_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\JarvanIV_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Jax_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Jayce_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Jinx_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Karma_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Karthus_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Kassadin_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Katarina_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Kayle_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Kennen_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Khazix_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\KogMaw_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Leblanc_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\LeeSin_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Leona_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Lissandra_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Lucian_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Lulu_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Lux_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Malphite_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Malzahar_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Maokai_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\MasterYi_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\MissFortune_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\MonkeyKing_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Mordekaiser_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Morgana_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Nami_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Nasus_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Nautilus_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Nidalee_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Nocturne_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Nunu_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Olaf_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Orianna_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Pantheon_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Poppy_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Quinn_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Rammus_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Renekton_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Rengar_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Riven_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Rumble_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Ryze_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Sejuani_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Shaco_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Shen_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Shyvana_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Singed_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Sion_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Sivir_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Skarner_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Sona_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Soraka_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Swain_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Syndra_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Talon_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Taric_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Teemo_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Thresh_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Tristana_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Trundle_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Tryndamere_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\TwistedFate_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Twitch_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Udyr_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Urgot_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Varus_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Vayne_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Veigar_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Velkoz_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Vi_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Viktor_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Vladimir_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Volibear_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Warwick_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Xerath_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\XinZhao_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Yasuo_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Yorick_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Zac_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Zed_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Ziggs_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Zilean_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAMP_MM\Zyra_MM.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUMMONERS\SpellTintGreen.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUMMONERS\SpellTintRed.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EXT\GoldCsLvlBar.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPELLS\luxlightstriketoggle.dds" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

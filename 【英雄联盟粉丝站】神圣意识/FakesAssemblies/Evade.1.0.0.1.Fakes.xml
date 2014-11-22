@@ -1,0 +1,629 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Evade.1.0.0.1.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:Evade.Fakes.ShimEvader">
+            <summary>Shim-Typ von Evade.Evader</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimEvader.#ctor">
+            <summary>Initialisiert eine neue Shim-Instanz.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimEvader.BehaveAsCurrent">
+            <summary>Weist das &apos;Current&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimEvader.BehaveAsNotImplemented">
+            <summary>Weist das &apos;NotImplemented&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimEvader.Behavior">
+            <summary>Weist das Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimEvader.GetEvadePointsInt32Int32BooleanBoolean">
+            <summary>Legt die shim von Evader.GetEvadePoints(Int32 speed, Int32 delay, Boolean isBlink, Boolean onlyGood) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimEvader.GetEvadeTargetsSpellValidTargetsArrayInt32Int32SingleBooleanBooleanBoolean">
+            <summary>Legt die shim von Evader.GetEvadeTargets(SpellValidTargets[] validTargets, Int32 speed, Int32 delay, Single range, Boolean isBlink, Boolean onlyGood, Boolean DontCheckForSafety) fest.</summary>
+        </member>
+        <member name="T:Evade.Fakes.ShimFoundIntersection">
+            <summary>Shim-Typ von Evade.FoundIntersection</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimFoundIntersection.#ctor">
+            <summary>Initialisiert eine neue Shim-Instanz.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimFoundIntersection.BehaveAsCurrent">
+            <summary>Weist das &apos;Current&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimFoundIntersection.BehaveAsNotImplemented">
+            <summary>Weist das &apos;NotImplemented&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimFoundIntersection.Behavior">
+            <summary>Weist das Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="T:Evade.Fakes.ShimFoundIntersection.AllInstances">
+            <summary>Shims für alle Instanzenmember definieren</summary>
+        </member>
+        <member name="T:Evade.Fakes.ShimGeometry">
+            <summary>Shim-Typ von Evade.Geometry</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimGeometry.#ctor">
+            <summary>Initialisiert eine neue Shim-Instanz.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimGeometry.BehaveAsCurrent">
+            <summary>Weist das &apos;Current&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimGeometry.BehaveAsNotImplemented">
+            <summary>Weist das &apos;NotImplemented&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.Behavior">
+            <summary>Weist das Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ClipPolygonsListOfGeometryPolygon">
+            <summary>Legt die shim von Geometry.ClipPolygons(List`1&lt;Polygon&gt; polygons) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.PositionAfterListOfVector2Int32Int32Int32">
+            <summary>Legt die shim von Geometry.PositionAfter(List`1&lt;Vector2&gt; self, Int32 t, Int32 speed, Int32 delay) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.SwitchYZVector3">
+            <summary>Legt die shim von Geometry.SwitchYZ(Vector3 v) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ToPolygonListOfIntPoint">
+            <summary>Legt die shim von Geometry.ToPolygon(List`1&lt;IntPoint&gt; v) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ToPolygonsListOfListOfIntPoint">
+            <summary>Legt die shim von Geometry.ToPolygons(List`1&lt;List`1&lt;IntPoint&gt;&gt; v) fest.</summary>
+        </member>
+        <member name="T:Evade.Fakes.ShimGeometry.ShimCircle">
+            <summary>Shim-Typ von Evade.Geometry+Circle</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimGeometry.ShimCircle.#ctor">
+            <summary>Initialisiert eine neue Shim-Instanz.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimGeometry.ShimCircle.#ctor(Evade.Geometry.Circle)">
+            <summary>Initialisiert einen neuen Shim für die gegebene Instanz.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimGeometry.ShimCircle.BehaveAsCurrent">
+            <summary>Weist das &apos;Current&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimGeometry.ShimCircle.BehaveAsNotImplemented">
+            <summary>Weist das &apos;NotImplemented&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimCircle.Behavior">
+            <summary>Weist das Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimCircle.ConstructorVector2Single">
+            <summary>Legt die shim von Circle.Circle(Vector2 center, Single radius) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimCircle.ToPolygonInt32Single">
+            <summary>Legt die shim von Circle.ToPolygon(Int32 offset, Single overrideWidth) fest.</summary>
+        </member>
+        <member name="T:Evade.Fakes.ShimGeometry.ShimCircle.AllInstances">
+            <summary>Shims für alle Instanzenmember definieren</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimCircle.AllInstances.ToPolygonInt32Single">
+            <summary>Legt die shim von Circle.ToPolygon(Int32 offset, Single overrideWidth) fest.</summary>
+        </member>
+        <member name="T:Evade.Fakes.ShimGeometry.ShimPolygon">
+            <summary>Shim-Typ von Evade.Geometry+Polygon</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimGeometry.ShimPolygon.#ctor">
+            <summary>Initialisiert eine neue Shim-Instanz.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimGeometry.ShimPolygon.#ctor(Evade.Geometry.Polygon)">
+            <summary>Initialisiert einen neuen Shim für die gegebene Instanz.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimGeometry.ShimPolygon.BehaveAsCurrent">
+            <summary>Weist das &apos;Current&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimGeometry.ShimPolygon.BehaveAsNotImplemented">
+            <summary>Weist das &apos;NotImplemented&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimPolygon.AddVector2">
+            <summary>Legt die shim von Polygon.Add(Vector2 point) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimPolygon.Behavior">
+            <summary>Weist das Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimPolygon.Constructor">
+            <summary>Legt die shim von Polygon.Polygon() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimPolygon.DrawColorInt32">
+            <summary>Legt die shim von Polygon.Draw(Color color, Int32 width) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimPolygon.IsOutsideVector2">
+            <summary>Legt die shim von Polygon.IsOutside(Vector2 point) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimPolygon.ToClipperPath">
+            <summary>Legt die shim von Polygon.ToClipperPath() fest.</summary>
+        </member>
+        <member name="T:Evade.Fakes.ShimGeometry.ShimPolygon.AllInstances">
+            <summary>Shims für alle Instanzenmember definieren</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimPolygon.AllInstances.AddVector2">
+            <summary>Legt die shim von Polygon.Add(Vector2 point) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimPolygon.AllInstances.DrawColorInt32">
+            <summary>Legt die shim von Polygon.Draw(Color color, Int32 width) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimPolygon.AllInstances.IsOutsideVector2">
+            <summary>Legt die shim von Polygon.IsOutside(Vector2 point) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimPolygon.AllInstances.ToClipperPath">
+            <summary>Legt die shim von Polygon.ToClipperPath() fest.</summary>
+        </member>
+        <member name="T:Evade.Fakes.ShimGeometry.ShimRectangle">
+            <summary>Shim-Typ von Evade.Geometry+Rectangle</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimGeometry.ShimRectangle.#ctor">
+            <summary>Initialisiert eine neue Shim-Instanz.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimGeometry.ShimRectangle.#ctor(Evade.Geometry.Rectangle)">
+            <summary>Initialisiert einen neuen Shim für die gegebene Instanz.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimGeometry.ShimRectangle.BehaveAsCurrent">
+            <summary>Weist das &apos;Current&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimGeometry.ShimRectangle.BehaveAsNotImplemented">
+            <summary>Weist das &apos;NotImplemented&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimRectangle.Behavior">
+            <summary>Weist das Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimRectangle.ConstructorVector2Vector2Single">
+            <summary>Legt die shim von Rectangle.Rectangle(Vector2 start, Vector2 end, Single width) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimRectangle.ToPolygonInt32Single">
+            <summary>Legt die shim von Rectangle.ToPolygon(Int32 offset, Single overrideWidth) fest.</summary>
+        </member>
+        <member name="T:Evade.Fakes.ShimGeometry.ShimRectangle.AllInstances">
+            <summary>Shims für alle Instanzenmember definieren</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimRectangle.AllInstances.ToPolygonInt32Single">
+            <summary>Legt die shim von Rectangle.ToPolygon(Int32 offset, Single overrideWidth) fest.</summary>
+        </member>
+        <member name="T:Evade.Fakes.ShimGeometry.ShimRing">
+            <summary>Shim-Typ von Evade.Geometry+Ring</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimGeometry.ShimRing.#ctor">
+            <summary>Initialisiert eine neue Shim-Instanz.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimGeometry.ShimRing.#ctor(Evade.Geometry.Ring)">
+            <summary>Initialisiert einen neuen Shim für die gegebene Instanz.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimGeometry.ShimRing.BehaveAsCurrent">
+            <summary>Weist das &apos;Current&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimGeometry.ShimRing.BehaveAsNotImplemented">
+            <summary>Weist das &apos;NotImplemented&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimRing.Behavior">
+            <summary>Weist das Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimRing.ConstructorVector2SingleSingle">
+            <summary>Legt die shim von Ring.Ring(Vector2 center, Single radius, Single ringRadius) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimRing.ToPolygonInt32">
+            <summary>Legt die shim von Ring.ToPolygon(Int32 offset) fest.</summary>
+        </member>
+        <member name="T:Evade.Fakes.ShimGeometry.ShimRing.AllInstances">
+            <summary>Shims für alle Instanzenmember definieren</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimRing.AllInstances.ToPolygonInt32">
+            <summary>Legt die shim von Ring.ToPolygon(Int32 offset) fest.</summary>
+        </member>
+        <member name="T:Evade.Fakes.ShimGeometry.ShimSector">
+            <summary>Shim-Typ von Evade.Geometry+Sector</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimGeometry.ShimSector.#ctor">
+            <summary>Initialisiert eine neue Shim-Instanz.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimGeometry.ShimSector.#ctor(Evade.Geometry.Sector)">
+            <summary>Initialisiert einen neuen Shim für die gegebene Instanz.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimGeometry.ShimSector.BehaveAsCurrent">
+            <summary>Weist das &apos;Current&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimGeometry.ShimSector.BehaveAsNotImplemented">
+            <summary>Weist das &apos;NotImplemented&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimSector.Behavior">
+            <summary>Weist das Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimSector.ConstructorVector2Vector2SingleSingle">
+            <summary>Legt die shim von Sector.Sector(Vector2 center, Vector2 direction, Single angle, Single radius) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimSector.ToPolygonInt32">
+            <summary>Legt die shim von Sector.ToPolygon(Int32 offset) fest.</summary>
+        </member>
+        <member name="T:Evade.Fakes.ShimGeometry.ShimSector.AllInstances">
+            <summary>Shims für alle Instanzenmember definieren</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimGeometry.ShimSector.AllInstances.ToPolygonInt32">
+            <summary>Legt die shim von Sector.ToPolygon(Int32 offset) fest.</summary>
+        </member>
+        <member name="T:Evade.Fakes.ShimSafePathResult">
+            <summary>Shim-Typ von Evade.SafePathResult</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimSafePathResult.#ctor">
+            <summary>Initialisiert eine neue Shim-Instanz.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimSafePathResult.BehaveAsCurrent">
+            <summary>Weist das &apos;Current&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimSafePathResult.BehaveAsNotImplemented">
+            <summary>Weist das &apos;NotImplemented&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSafePathResult.Behavior">
+            <summary>Weist das Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="T:Evade.Fakes.ShimSafePathResult.AllInstances">
+            <summary>Shims für alle Instanzenmember definieren</summary>
+        </member>
+        <member name="T:Evade.Fakes.ShimSkillshot">
+            <summary>Shim-Typ von Evade.Skillshot</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimSkillshot.#ctor">
+            <summary>Initialisiert eine neue Shim-Instanz.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimSkillshot.#ctor(Evade.Skillshot)">
+            <summary>Initialisiert einen neuen Shim für die gegebene Instanz.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimSkillshot.BehaveAsCurrent">
+            <summary>Weist das &apos;Current&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimSkillshot.BehaveAsNotImplemented">
+            <summary>Weist das &apos;NotImplemented&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimSkillshot.GetValueOf1String``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.String,``0})">
+            <summary>Legt die shim von Skillshot.GetValue(String name) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.Behavior">
+            <summary>Weist das Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.CollisionEndGet">
+            <summary>Legt die shim von Skillshot.get_CollisionEnd() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.ConstructorDetectionTypeSpellDataInt32Vector2Vector2Obj_AI_Base">
+            <summary>Legt die shim von Skillshot.Skillshot(DetectionType detectionType, SpellData spellData, Int32 startT, Vector2 start, Vector2 end, Obj_AI_Base unit) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.DrawColorColorInt32">
+            <summary>Legt die shim von Skillshot.Draw(Color color, Color missileColor, Int32 width) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.Evade">
+            <summary>Legt die shim von Skillshot.Evade() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.EvadePolygonGet">
+            <summary>Legt die shim von Skillshot.get_EvadePolygon() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.EvadePolygonSetGeometryPolygon">
+            <summary>Legt die shim von Skillshot.set_EvadePolygon(Polygon value) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.Game_OnGameUpdate">
+            <summary>Legt die shim von Skillshot.Game_OnGameUpdate() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.GetMissilePositionInt32">
+            <summary>Legt die shim von Skillshot.GetMissilePosition(Int32 time) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.GlobalGetMissilePositionInt32">
+            <summary>Legt die shim von Skillshot.GlobalGetMissilePosition(Int32 time) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.IsAboutToHitInt32Obj_AI_Base">
+            <summary>Legt die shim von Skillshot.IsAboutToHit(Int32 time, Obj_AI_Base unit) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.IsActive">
+            <summary>Legt die shim von Skillshot.IsActive() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.IsDangerVector2">
+            <summary>Legt die shim von Skillshot.IsDanger(Vector2 point) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.IsGlobalGet">
+            <summary>Legt die shim von Skillshot.get_IsGlobal() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.IsSafePathListOfVector2Int32Int32Int32Obj_AI_Base">
+            <summary>Legt die shim von Skillshot.IsSafePath(List`1&lt;Vector2&gt; path, Int32 timeOffset, Int32 speed, Int32 delay, Obj_AI_Base unit) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.IsSafeToBlinkVector2Int32Int32">
+            <summary>Legt die shim von Skillshot.IsSafeToBlink(Vector2 point, Int32 timeOffset, Int32 delay) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.IsSafeVector2">
+            <summary>Legt die shim von Skillshot.IsSafe(Vector2 point) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.PerpendicularGet">
+            <summary>Legt die shim von Skillshot.get_Perpendicular() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.UnitGet">
+            <summary>Legt die shim von Skillshot.get_Unit() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.UnitSetObj_AI_Base">
+            <summary>Legt die shim von Skillshot.set_Unit(Obj_AI_Base value) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.UpdatePolygon">
+            <summary>Legt die shim von Skillshot.UpdatePolygon() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot._IsSafePathb__0FoundIntersection">
+            <summary>Legt die shim von Skillshot.&lt;IsSafePath&gt;b__0(FoundIntersection o) fest.</summary>
+        </member>
+        <member name="T:Evade.Fakes.ShimSkillshot.AllInstances">
+            <summary>Shims für alle Instanzenmember definieren</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimSkillshot.AllInstances.GetValueOf1String``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{Evade.Skillshot,System.String,``0})">
+            <summary>Legt die shim von Skillshot.GetValue(String name) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.AllInstances.CollisionEndGet">
+            <summary>Legt die shim von Skillshot.get_CollisionEnd() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.AllInstances.DrawColorColorInt32">
+            <summary>Legt die shim von Skillshot.Draw(Color color, Color missileColor, Int32 width) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.AllInstances.Evade">
+            <summary>Legt die shim von Skillshot.Evade() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.AllInstances.EvadePolygonGet">
+            <summary>Legt die shim von Skillshot.get_EvadePolygon() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.AllInstances.EvadePolygonSetGeometryPolygon">
+            <summary>Legt die shim von Skillshot.set_EvadePolygon(Polygon value) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.AllInstances.Game_OnGameUpdate">
+            <summary>Legt die shim von Skillshot.Game_OnGameUpdate() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.AllInstances.GetMissilePositionInt32">
+            <summary>Legt die shim von Skillshot.GetMissilePosition(Int32 time) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.AllInstances.GlobalGetMissilePositionInt32">
+            <summary>Legt die shim von Skillshot.GlobalGetMissilePosition(Int32 time) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.AllInstances.IsAboutToHitInt32Obj_AI_Base">
+            <summary>Legt die shim von Skillshot.IsAboutToHit(Int32 time, Obj_AI_Base unit) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.AllInstances.IsActive">
+            <summary>Legt die shim von Skillshot.IsActive() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.AllInstances.IsDangerVector2">
+            <summary>Legt die shim von Skillshot.IsDanger(Vector2 point) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.AllInstances.IsGlobalGet">
+            <summary>Legt die shim von Skillshot.get_IsGlobal() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.AllInstances.IsSafePathListOfVector2Int32Int32Int32Obj_AI_Base">
+            <summary>Legt die shim von Skillshot.IsSafePath(List`1&lt;Vector2&gt; path, Int32 timeOffset, Int32 speed, Int32 delay, Obj_AI_Base unit) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.AllInstances.IsSafeToBlinkVector2Int32Int32">
+            <summary>Legt die shim von Skillshot.IsSafeToBlink(Vector2 point, Int32 timeOffset, Int32 delay) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.AllInstances.IsSafeVector2">
+            <summary>Legt die shim von Skillshot.IsSafe(Vector2 point) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.AllInstances.PerpendicularGet">
+            <summary>Legt die shim von Skillshot.get_Perpendicular() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.AllInstances.UnitGet">
+            <summary>Legt die shim von Skillshot.get_Unit() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.AllInstances.UnitSetObj_AI_Base">
+            <summary>Legt die shim von Skillshot.set_Unit(Obj_AI_Base value) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshot.AllInstances.UpdatePolygon">
+            <summary>Legt die shim von Skillshot.UpdatePolygon() fest.</summary>
+        </member>
+        <member name="T:Evade.Fakes.ShimSkillshotDetector">
+            <summary>Shim-Typ von Evade.SkillshotDetector</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimSkillshotDetector.#ctor">
+            <summary>Initialisiert eine neue Shim-Instanz.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimSkillshotDetector.BehaveAsCurrent">
+            <summary>Weist das &apos;Current&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimSkillshotDetector.BehaveAsNotImplemented">
+            <summary>Weist das &apos;NotImplemented&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshotDetector.Behavior">
+            <summary>Weist das Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshotDetector.GameObject_OnCreateGameObjectEventArgs">
+            <summary>Legt die shim von SkillshotDetector.GameObject_OnCreate(GameObject sender, EventArgs args) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshotDetector.GameObject_OnDeleteGameObjectEventArgs">
+            <summary>Legt die shim von SkillshotDetector.GameObject_OnDelete(GameObject sender, EventArgs args) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshotDetector.GameOnOnGameProcessPacketGamePacketEventArgs">
+            <summary>Legt die shim von SkillshotDetector.GameOnOnGameProcessPacket(GamePacketEventArgs args) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshotDetector.Game_OnWndProcWndEventArgs">
+            <summary>Legt die shim von SkillshotDetector.Game_OnWndProc(WndEventArgs args) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshotDetector.ObjAiHeroOnOnProcessSpellCastObj_AI_BaseGameObjectProcessSpellCastEventArgs">
+            <summary>Legt die shim von SkillshotDetector.ObjAiHeroOnOnProcessSpellCast(Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshotDetector.ObjSpellMissileOnOnCreateGameObjectEventArgs">
+            <summary>Legt die shim von SkillshotDetector.ObjSpellMissileOnOnCreate(GameObject sender, EventArgs args) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshotDetector.ObjSpellMissileOnOnDeleteGameObjectEventArgs">
+            <summary>Legt die shim von SkillshotDetector.ObjSpellMissileOnOnDelete(GameObject sender, EventArgs args) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshotDetector.OnDeleteMissileAddSkillshotDetectorOnDeleteMissileH">
+            <summary>Legt die shim von SkillshotDetector.add_OnDeleteMissile(OnDeleteMissileH value) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshotDetector.OnDeleteMissileRemoveSkillshotDetectorOnDeleteMissileH">
+            <summary>Legt die shim von SkillshotDetector.remove_OnDeleteMissile(OnDeleteMissileH value) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshotDetector.OnDetectSkillshotAddSkillshotDetectorOnDetectSkillshotH">
+            <summary>Legt die shim von SkillshotDetector.add_OnDetectSkillshot(OnDetectSkillshotH value) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshotDetector.OnDetectSkillshotRemoveSkillshotDetectorOnDetectSkillshotH">
+            <summary>Legt die shim von SkillshotDetector.remove_OnDetectSkillshot(OnDetectSkillshotH value) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshotDetector.StaticConstructor">
+            <summary>Legt die shim von SkillshotDetector.SkillshotDetector() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSkillshotDetector.TriggerOnDetectSkillshotDetectionTypeSpellDataInt32Vector2Vector2Obj_AI_Base">
+            <summary>Legt die shim von SkillshotDetector.TriggerOnDetectSkillshot(DetectionType detectionType, SpellData spellData, Int32 startT, Vector2 start, Vector2 end, Obj_AI_Base unit) fest.</summary>
+        </member>
+        <member name="T:Evade.Fakes.ShimSpellData">
+            <summary>Shim-Typ von Evade.SpellData</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimSpellData.#ctor">
+            <summary>Initialisiert eine neue Shim-Instanz.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimSpellData.#ctor(Evade.SpellData)">
+            <summary>Initialisiert einen neuen Shim für die gegebene Instanz.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimSpellData.BehaveAsCurrent">
+            <summary>Weist das &apos;Current&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimSpellData.BehaveAsNotImplemented">
+            <summary>Weist das &apos;NotImplemented&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSpellData.Behavior">
+            <summary>Weist das Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSpellData.Constructor">
+            <summary>Legt die shim von SpellData.SpellData() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSpellData.ConstructorStringStringSpellSlotSkillShotTypeInt32Int32Int32Int32BooleanBooleanInt32">
+            <summary>Legt die shim von SpellData.SpellData(String championName, String spellName, SpellSlot slot, SkillShotType type, Int32 delay, Int32 range, Int32 radius, Int32 missileSpeed, Boolean addHitbox, Boolean fixedRange, Int32 defaultDangerValue) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSpellData.MenuItemNameGet">
+            <summary>Legt die shim von SpellData.get_MenuItemName() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSpellData.RadiusGet">
+            <summary>Legt die shim von SpellData.get_Radius() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSpellData.RadiusSetInt32">
+            <summary>Legt die shim von SpellData.set_Radius(Int32 value) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSpellData.RangeGet">
+            <summary>Legt die shim von SpellData.get_Range() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSpellData.RangeSetInt32">
+            <summary>Legt die shim von SpellData.set_Range(Int32 value) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSpellData.RawRadiusGet">
+            <summary>Legt die shim von SpellData.get_RawRadius() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSpellData.RawRangeGet">
+            <summary>Legt die shim von SpellData.get_RawRange() fest.</summary>
+        </member>
+        <member name="T:Evade.Fakes.ShimSpellData.AllInstances">
+            <summary>Shims für alle Instanzenmember definieren</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSpellData.AllInstances.MenuItemNameGet">
+            <summary>Legt die shim von SpellData.get_MenuItemName() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSpellData.AllInstances.RadiusGet">
+            <summary>Legt die shim von SpellData.get_Radius() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSpellData.AllInstances.RadiusSetInt32">
+            <summary>Legt die shim von SpellData.set_Radius(Int32 value) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSpellData.AllInstances.RangeGet">
+            <summary>Legt die shim von SpellData.get_Range() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSpellData.AllInstances.RangeSetInt32">
+            <summary>Legt die shim von SpellData.set_Range(Int32 value) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSpellData.AllInstances.RawRadiusGet">
+            <summary>Legt die shim von SpellData.get_RawRadius() fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSpellData.AllInstances.RawRangeGet">
+            <summary>Legt die shim von SpellData.get_RawRange() fest.</summary>
+        </member>
+        <member name="T:Evade.Fakes.ShimSpellDatabase">
+            <summary>Shim-Typ von Evade.SpellDatabase</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimSpellDatabase.#ctor">
+            <summary>Initialisiert eine neue Shim-Instanz.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimSpellDatabase.BehaveAsCurrent">
+            <summary>Weist das &apos;Current&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimSpellDatabase.BehaveAsNotImplemented">
+            <summary>Weist das &apos;NotImplemented&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSpellDatabase.Behavior">
+            <summary>Weist das Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSpellDatabase.GetByMissileNameString">
+            <summary>Legt die shim von SpellDatabase.GetByMissileName(String missileSpellName) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSpellDatabase.GetByNameString">
+            <summary>Legt die shim von SpellDatabase.GetByName(String spellName) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSpellDatabase.GetBySpeedStringInt32Int32">
+            <summary>Legt die shim von SpellDatabase.GetBySpeed(String ChampionName, Int32 speed, Int32 id) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimSpellDatabase.StaticConstructor">
+            <summary>Legt die shim von SpellDatabase.SpellDatabase() fest.</summary>
+        </member>
+        <member name="T:Evade.Fakes.ShimUtils">
+            <summary>Shim-Typ von Evade.Utils</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimUtils.#ctor">
+            <summary>Initialisiert eine neue Shim-Instanz.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimUtils.BehaveAsCurrent">
+            <summary>Weist das &apos;Current&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="M:Evade.Fakes.ShimUtils.BehaveAsNotImplemented">
+            <summary>Weist das &apos;NotImplemented&apos;-Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimUtils.Behavior">
+            <summary>Weist das Verhalten für alle Methoden des Shim-Typs zu.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimUtils.ClosestListOfObj_AI_BaseVector2">
+            <summary>Legt die shim von Utils.Closest(List`1&lt;Obj_AI_Base&gt; targetList, Vector2 from) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimUtils.DrawLineInWorldVector3Vector3Int32Color">
+            <summary>Legt die shim von Utils.DrawLineInWorld(Vector3 start, Vector3 end, Int32 width, Color color) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimUtils.ImmobileTimeObj_AI_Base">
+            <summary>Legt die shim von Utils.ImmobileTime(Obj_AI_Base unit) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimUtils.SendMovePacketObj_AI_BaseVector2">
+            <summary>Legt die shim von Utils.SendMovePacket(Obj_AI_Base v, Vector2 point) fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.ShimUtils.To2DListVector3Array">
+            <summary>Legt die shim von Utils.To2DList(Vector3[] v) fest.</summary>
+        </member>
+        <member name="T:Evade.Fakes.StubSkillshot">
+            <summary>Stub-Typ von Evade.Skillshot</summary>
+        </member>
+        <member name="M:Evade.Fakes.StubSkillshot.#ctor(Evade.DetectionType,Evade.SpellData,System.Int32,SharpDX.Vector2,SharpDX.Vector2,LeagueSharp.Obj_AI_Base)">
+            <summary>Initialisiert eine neue Instanz.</summary>
+        </member>
+        <member name="M:Evade.Fakes.StubSkillshot.InitializeStub">
+            <summary>Initialisiert eine neue Instanz von type StubSkillshot.</summary>
+        </member>
+        <member name="P:Evade.Fakes.StubSkillshot.CallBase">
+            <summary>Ruft einen Wert ab, der angibt, ob die Basismethode anstelle des Fallback-Verhaltens abgerufen werden soll, oder legt diesen fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.StubSkillshot.InstanceBehavior">
+            <summary>Ruft das Instanzverhalten ab, oder legt dieses fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.StubSkillshot.InstanceObserver">
+            <summary>Ruft den Instanzbeobachter ab, oder legt ihn fest.</summary>
+        </member>
+        <member name="T:Evade.Fakes.StubSpellData">
+            <summary>Stub-Typ von Evade.SpellData</summary>
+        </member>
+        <member name="M:Evade.Fakes.StubSpellData.#ctor">
+            <summary>Initialisiert eine neue Instanz.</summary>
+        </member>
+        <member name="M:Evade.Fakes.StubSpellData.#ctor(System.String,System.String,LeagueSharp.SpellSlot,Evade.SkillShotType,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Int32)">
+            <summary>Initialisiert eine neue Instanz.</summary>
+        </member>
+        <member name="M:Evade.Fakes.StubSpellData.InitializeStub">
+            <summary>Initialisiert eine neue Instanz von type StubSpellData.</summary>
+        </member>
+        <member name="P:Evade.Fakes.StubSpellData.CallBase">
+            <summary>Ruft einen Wert ab, der angibt, ob die Basismethode anstelle des Fallback-Verhaltens abgerufen werden soll, oder legt diesen fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.StubSpellData.InstanceBehavior">
+            <summary>Ruft das Instanzverhalten ab, oder legt dieses fest.</summary>
+        </member>
+        <member name="P:Evade.Fakes.StubSpellData.InstanceObserver">
+            <summary>Ruft den Instanzbeobachter ab, oder legt ihn fest.</summary>
+        </member>
+    </members>
+</doc>
