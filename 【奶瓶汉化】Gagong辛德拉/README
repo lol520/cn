@@ -1,0 +1,108 @@
+Features:
+
+Combo:
+
+    Use Q
+    Use W
+    Use E  (logic: E only if there are orbs, but will cast E if target is killable by combo) 
+    Use R  (logic: Will be used only if target is killable, Won't be used if can be killed by QWE or if target is stunned and target can be killed by Q but is on cooldown that is less than 2seconds, it will wait for Q instead of bursting with R) 
+    Use QE
+    Smart DFG by default  (logic: Use dfg if you can kill a target with DFG+QEW or DFG+ QREW, doesn't use DFG if can be killed by QEW alone) 
+    Smart R by default (logic: Also if you turned on R only if QWE on CD, it will be used after Q if target is killable but you can't do the full combo because of mana limitations )
+    Override Smart DFG and R by pressing combo key + harass key at the same time (logic: it will try to use all the skills on the target, regardless if the target is killable or not)
+    Combo Sequence is DFG Q R E W by default
+    Auto Ignite
+    By default, Current Mana is Used on Combo Calculations
+
+Harass:
+
+    Use Q
+    Use Q when enemy AA you
+    Use W
+    Use E
+    Use QE
+    Harass Mana Level
+    Harass Key Press
+    Harass Toggle Key
+
+Auto KS:
+
+    Use Q
+    Use W
+    Use E
+    Use R
+    Use QE
+    Auto KS Toggle Key
+
+Auto KS with Flash:
+
+    If can be killed with QE
+    If can be killed with DFG+R
+    If enemies within 1000 range of target is less than or equal to custom # of enemies (note: includes the target)
+    Flash Kill only for selected targets
+
+Misc:
+
+    Anti Gap Closer
+    Auto Interrupter
+
+QE Settings:
+
+    Set custom delay for QE
+    QE to mouse position
+
+R Settings:
+
+    Only R if all other skills that are ready can't kill the target and target is killable by R  (logic: if turned off, If target is killable with R even if you can kill the target with Q E or W, + AA it will use R)
+    Don't R on selected targets
+
+Drawings with customizable colors:
+
+    Q range
+    W range
+    E range
+    R range
+    QE range
+    QE to cursor
+    Enemy HP after Combo indicator with visual colors to indicate if can be killed by Q after full combo
+
+Note:
+
+Damage Calculations are based on the target's current state without putting into consideration their skills, shields, summoner spells, item shields.
+
+This includes barriers, heal, spell shields (morgana's shield), items with shields (banshee's), skills that block skills (sivir's,viktor's) , sudden hp/mdef gain (alistar's SS and nasus's)
+
+Please do consider this before engaging in a fight.
+
+Reporting this as bugs will be ignored.
+
+Actual scenario that might happen:
+
+The assembly identifies someone is killable with a combo
+
+The auto KS function kicks in but the target ended up alive because in the middle of your combo things mentioned above happened.
+
+Todo:
+
+Will try to add support for the aboved mentioned
+
+Github: https://github.com/stephenjason89/GagongSyndra
+
+Install: ls://project/stephenjason89/GagongSyndra
+
+Anyone can request a feature to be added, if i deem it necessary, It will be added.
+
+Please report bugs on the following format:
+1. What are you testing
+
+2. What happened
+
+3. What do you expect to happen
+
+Credits:
+
+Kortatu's Original Syndra Assembly http://www.joduska.me/forum/topic/90-syndra/
+
+Rio Syndra for the inspiration http://www.joduska.me/forum/topic/2840-riosyndra/
+
+Syndra Mod by XSalice (Modded Eskor's Syndra I think)  https://github.com/xSalice/LSharp/tree/master/SyndraMod/SyndraMod
