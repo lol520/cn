@@ -328,6 +328,7 @@ description: 给 HyperFrames（或 Remotion）视频定“风格描述”。当�
 - 参考工程：/workspace/work/onetake/cases/koubo-v5/comp.html（caps 数组＝字幕时间，face/ 为 30fps 抽帧 jpg，__seek 里换帧）。抽帧：ffmpeg -ss 起点 -i edited.mp4 -vf "fps=30,crop=720:860:0:40,scale=540:-2" -q:v 3 face/%04d.jpg；渲染：render.py comp.html --width 1080 --height 1920 --sfx seg.wav --samples 3 --resume（31 秒约 15 分钟，单 worker）。shot.py 先抽 5–7 张静帧检查卡片留白、印章是否压字、字幕是否重叠。
 
 ## v6 增补（2026-10-15）：借鉴 MotionGit 模板动效
+**选用范围（喵叔 2026-10-15）**：v6 只是往素材池里加组件，不是新的默认清单。每期从全部特效里按内容挑——20 个模板、onetake 一镜到底各外观、v3 固定舞台、v4 小Lin说、v5 藏青珊瑚、v6 这些，混搭也行。
 来源：喵叔 Drive「05_工具包与skill/MotionGit模板」29 套 .motion，看过官网示例片后挑出能用的，说「可以用的效果就拿来用」。原模板源码加密、时长固定，所以这里用自己的 HTML/GSAP 复刻动效，按内容选用，不当默认。品牌、字幕、硬规则照旧。
 **口播讲解类组件（来自 AduNext 纸面透视 / 现代图文 / 鲜色角色 / 科技控制台）**
 - 原来 vs 调整后对比卡：两张白卡并排，左红标题右绿标题，三行逐行对应亮起，底注「对应同一维度，再看差别」。用于新旧条款、两款产品同项对比。
