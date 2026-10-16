@@ -396,3 +396,28 @@ description: 给 HyperFrames（或 Remotion）视频定“风格描述”。当�
 - 导流：微信、vx、加微、私聊、私信、看主页、扫码、进群、点击领奖、免费领、0元购。
 - 虚假权威：国家级、特供、政府背书、专家推荐、官方授权。
 - 他人 IP 名（深蓝保、奶爸保、保瓶儿等其他保险自媒体）不出现在画面和配音里；保险公司、产品、监管机构名照实写。
+
+## v8 增补（2026-10-16）：外部动效 skill（GitHub 开源，已拉到沙盒）
+
+本地副本：`/workspace/work/ext/`（hf-repo = heygen-com/hyperframes 的 skills/，Apache-2.0；cf = Agentchengfeng/chengfeng-videocut-skills，Apache-2.0）。按内容挑，和 v1–v7 混搭，品牌、合规、去 AI 味规则照旧。
+
+**HyperFrames 官方 skill（直接用）**
+- `hyperframes-keyframes`：推近/拉远、Ken Burns、平移、遮罩裁切转场、分屏交接、快甩（whip）。规则照抄：时间线 paused、登记 `window.__timelines[id]`、不用 Date.now/随机数/无限循环、末帧也是画面的一部分（不黑屏收尾）、可读状态要停够。口播里「推一下镜头强调」用 wrapper 的 scale+x/y 做，不做逐帧人脸追踪（和圆窗规则一致）。
+- `hyperframes-registry`：455 个现成块和组件，清单在 `/workspace/work/ext/registry_list.tsv`，从 raw.githubusercontent.com/heygen-com/hyperframes/main/registry 直接取 HTML。手写某个效果之前先查有没有现成的。保险视频常用：
+  - 数据：count-up、number-pop-in、number-wheel、animated-bar-chart、bar-chart-race、heatmap、decline-chart、chart-story、conic-progress-ring、comparison-split、before-after-wipe
+  - 手写/批注：hw-underline、hw-callout-circle、hw-arrow、hw-box-label、marker-highlight、inline-highlight、strikethrough-replace、marker-checklist-card、whiteboard-ink、yt-circle-pointer
+  - 字幕/大字：caption-highlight、caption-pill-karaoke、caption-kinetic-slam、headline-slam、per-word-rise、kinetic-center-build
+  - 转场/镜头：whip-pan-cut、match-cut、push-in、pull-back-reveal、camera-shake、focus-rack、transitions-*（push/dissolve/radial/blur 等）、torn-paper-rip、paper-collage-reveal、ink-bleed-reveal
+  - 角标/条：lt-*（下三分之一名牌）、news-ticker（新闻播报风）、cta-close / logo-brand-close（片尾改成喵叔说保 lockup）
+  - 不用：社媒仿冒卡（x-post、tiktok-follow、reddit-post 等）、关注引导类，避开导流
+- `talking-head-recut`：真人口播「原片不动 + 按字幕时间叠设计卡」的官方流程（标题、名牌、数据卡、引用、侧栏、画中画），可作 v4/v5 口播包装的另一套做法；转写用本地 Whisper，和我们现有 ASR 一致。
+- `embedded-captions`：35 种字幕风格目录；默认安静的底部字幕条，只在高潮句把大字嵌到人物身后（需要抠像）。嵌字是稀缺高潮，不全片用。
+- `faceless-explainer`：无真人讲解片的讲法：先找「观众是谁、卡在哪、一句话结论、3–6 个支点、证据、落点」，按理解顺序重排，不照原文段落顺序念。写 TTS 长视频脚本时照这个排结构。
+- 其他可参考：`hyperframes-animation`（场景配方）、`slideshow`、`motion-graphics`。
+
+**小黑 SVG 动效（ian-xiaohei-svg-motion，新增一种风格）**
+- 白底手绘漫画：一个认知动作 + 一个物理隐喻（分拣、搬运、搭桥、漏、接住、折叠、称重、打开、改道、掉落），小黑必须在做核心动作；留白 35% 以上，手写批注 3–5 条以内，少量红橙蓝。
+- 做法：语义化 SVG 分组 + GSAP（x/y/rotation/scale/opacity/描边绘制），不把 PNG 自动矢量化。参考 `cf/.../animation-styles/ian-xiaohei-svg-motion/`（references 和模板）。
+- 适合：轻松科普、理赔流程、「为什么被拒赔」类概念解释；小黑是 Ian 的 IP（作品署名要求保留出处），只作风格参考，画面里的角色用喵叔头像/猫，不直接搬小黑形象。成片目录新建 `08_手绘小黑` 一类的风格文件夹。
+
+**没找到公开版本**：doudou-knowledge-archive、artifact-template-cinematic-course-posters（应为私有或本地自建，需要的话从他电脑上传 Drive `05_工具包与skill`）。Remotion 系列、manim 有公开仓库，但当前主流程是 HyperFrames，暂不并入。
