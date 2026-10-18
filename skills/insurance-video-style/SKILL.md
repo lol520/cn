@@ -500,15 +500,17 @@ description: 给 HyperFrames（或 Remotion）视频定“风格描述”。当�
 ## v11 增补（2026-10-18）：动效库（fxlib）
 
 喵叔 2026-10-18：「做一个吧 这些东西以后都可以复用的」。v1–v10 里用过、写过的效果已经拆成单个可复用文件，共 95 个，按「这一屏要做的事」分 11 类：01_流程顺序 / 02_结构拆解 / 03_对比 / 04_结论数字 / 05_清单核对 / 06_开场抓眼 / 07_情绪故事 / 08_转场 / 09_字幕与口播包装 / 10_图表信息图 / 11_镜头运动。效果不绑视频类型，目录里「也适合」列出其他可用场景。
-- 位置：沙盒 `/workspace/work/fxlib/`；Google Drive「05_工具包与skill/动效库」folder ID `1BLzC3-TscNXk3rh2D1RKivbz90TB346X`（含 fxlib.zip 全量包、动效目录.md、index.html 画廊、contact_sheet.png 总览图）。
+- 位置：沙盒 `/workspace/work/fxlib/`；Google Drive「05_工具包与skill/03_动效库」folder ID `1BLzC3-TscNXk3rh2D1RKivbz90TB346X`（2026-10-18 由「动效库」改名）（含 fxlib.zip 全量包、动效目录.md、index.html 画廊、contact_sheet.png 总览图）。
 - 每个效果一个文件夹：`effect.html`（单文件，所有可改文字/数字/颜色在顶部 CONFIG；一条 paused GSAP 时间线登记为 `window.__timelines["main"]`，可 seek；`?r=9x16` 竖屏重排、`?t=秒` 定格；onetake 用 `window.__seek(t)`）+ `preview.png` + `preview_9x16.png`。依赖 `_shared/`（gsap、Noto Sans/Serif SC 子集字体、头像、落款），拷走时一起拷或改路径。
 - **做视频前先查库**：按这一屏要做的事打开 `动效目录.md` / `index.html` 挑效果，复制对应 effect.html 改 CONFIG 再接进工程，库里没有的才手写。
-- **新效果回库**：每条视频交付后，把这期新做的效果按同样结构加回库（对应分类文件夹 + effect.html + preview.png + 目录一行；源码在 `_src/defs/*.fx`，`build.py` → `shot.py` → `gen_index.py`），再同步到 Drive「动效库」。
+- **新效果回库**：每条视频交付后，把这期新做的效果按同样结构加回库（对应分类文件夹 + effect.html + preview.png + 目录一行；源码在 `_src/defs/*.fx`，`build.py` → `shot.py` → `gen_index.py`），再同步到 Drive「05_工具包与skill/03_动效库」。
 - 规则照旧：示例文字已过违禁词表，真用时换成有来源+日期的数据；含分红数据标「演示利益，含不保证红利」；照片类效果（双重曝光、笔触重绘、照片马赛克、空间画廊、几何拼贴、半调网点、万花筒）素材需自有或授权。HyperFrames 规则：不用 Math.random（库里用确定性 rnd）、不用 from() + transformPerspective（seek 时不稳定）。
+
+- **Drive 05 结构（2026-10-18 重整）**：05_工具包与skill 下只有 01_规范与skill / 02_整片模板 / 03_动效库 / 04_外部工具包 / 05_项目归档 + 总目录.md。**整片模板统一编号 T01–T66，放在「02_整片模板/Txx_名称」（每个有 preview.png + 说明.md，总览 templates_sheet.jpg），总表见 05 根目录《总目录.md》**：T01–T20 自有 20 套风格、T21–T27 自有整片工程、T28–T50 MotionGit 23 种（.motion 原文件+HTML 复刻）、T51–T58 花叔 huashu-motion、T59–T66 HyperFrames 官方示例。动效库共 108 个：0101–1105 自有 95 个 + 12_HF官方示例 1201–1213（官方原代码，英文文案须换成中文保险内容并过违禁词扫描）。放东西照 Drive更新规范.md：整套模板→02 下一个 Txx（带 preview）；单个效果→03；外部工具包→04；每条视频的工程文件→05_项目归档/「日期_标题」。
 
 ## v12 增补（2026-10-18）：huashu-motion（花叔，MIT）
 
-- 来源：github.com/alchaincyf/huashu-motion，提交 3e92780，MIT。本地 `/workspace/work/ext/hm`，Drive「05_工具包与skill」有整包 zip。WorkBuddy 安装：`npx skills add alchaincyf/huashu-motion`（Node 22+、Chrome、FFmpeg；作者只在 macOS 实测，Windows 先跑 `om doctor`）。
+- 来源：github.com/alchaincyf/huashu-motion，提交 3e92780，MIT。本地 `/workspace/work/ext/hm`，Drive「05_工具包与skill/04_外部工具包」有整包 zip；8 个模板拆开放在「02_整片模板」T51–T58。WorkBuddy 安装：`npx skills add alchaincyf/huashu-motion`（Node 22+、Chrome、FFmpeg；作者只在 macOS 实测，Windows 先跑 `om doctor`）。
 - 定位：和 HyperFrames 同一路数（一个 index.html + 一条暂停的 GSAP 时间线），多了一整套工具：`om check`（文字被裁/被盖/低对比自动查）、`om qa`（单帧闪、空镜、动势曲线）、`om still` 截帧、`om render --blur` 真运动模糊、`om sound` 按落点配音效 + 自己写谱配乐（音乐给人声让位）、`om voice --audio` 逐字对齐出字幕、`om studio` 指着画面改。
 - 可借：8 个语法模板（talking-head 口播包装：名字条/数字卡/花字/章节卡，可导出透明叠层拖进剪映；finance-chart 数据解说；kinetic-type 动态字；whiteboard 白板；kurzgesagt 扁平科普；vox-collage 拼贴；math-3b1b；keynote-ui）；导演规则 references/director.md、rhythm.md（3 秒内钩子、能量曲线、每小节事件数）、talking-head.md。
 - 用法：做片子前先看动效库 fxlib；要口播包装叠层、配乐音效、渲染前自动检查时用 huashu-motion。渲染后照常过违禁词、免责声明、品牌「喵叔说保」。
