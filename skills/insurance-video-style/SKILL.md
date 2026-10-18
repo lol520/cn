@@ -505,3 +505,12 @@ description: 给 HyperFrames（或 Remotion）视频定“风格描述”。当�
 - **做视频前先查库**：按这一屏要做的事打开 `动效目录.md` / `index.html` 挑效果，复制对应 effect.html 改 CONFIG 再接进工程，库里没有的才手写。
 - **新效果回库**：每条视频交付后，把这期新做的效果按同样结构加回库（对应分类文件夹 + effect.html + preview.png + 目录一行；源码在 `_src/defs/*.fx`，`build.py` → `shot.py` → `gen_index.py`），再同步到 Drive「动效库」。
 - 规则照旧：示例文字已过违禁词表，真用时换成有来源+日期的数据；含分红数据标「演示利益，含不保证红利」；照片类效果（双重曝光、笔触重绘、照片马赛克、空间画廊、几何拼贴、半调网点、万花筒）素材需自有或授权。HyperFrames 规则：不用 Math.random（库里用确定性 rnd）、不用 from() + transformPerspective（seek 时不稳定）。
+
+## v12 增补（2026-10-18）：huashu-motion（花叔，MIT）
+
+- 来源：github.com/alchaincyf/huashu-motion，提交 3e92780，MIT。本地 `/workspace/work/ext/hm`，Drive「05_工具包与skill」有整包 zip。WorkBuddy 安装：`npx skills add alchaincyf/huashu-motion`（Node 22+、Chrome、FFmpeg；作者只在 macOS 实测，Windows 先跑 `om doctor`）。
+- 定位：和 HyperFrames 同一路数（一个 index.html + 一条暂停的 GSAP 时间线），多了一整套工具：`om check`（文字被裁/被盖/低对比自动查）、`om qa`（单帧闪、空镜、动势曲线）、`om still` 截帧、`om render --blur` 真运动模糊、`om sound` 按落点配音效 + 自己写谱配乐（音乐给人声让位）、`om voice --audio` 逐字对齐出字幕、`om studio` 指着画面改。
+- 可借：8 个语法模板（talking-head 口播包装：名字条/数字卡/花字/章节卡，可导出透明叠层拖进剪映；finance-chart 数据解说；kinetic-type 动态字；whiteboard 白板；kurzgesagt 扁平科普；vox-collage 拼贴；math-3b1b；keynote-ui）；导演规则 references/director.md、rhythm.md（3 秒内钩子、能量曲线、每小节事件数）、talking-head.md。
+- 用法：做片子前先看动效库 fxlib；要口播包装叠层、配乐音效、渲染前自动检查时用 huashu-motion。渲染后照常过违禁词、免责声明、品牌「喵叔说保」。
+- 不能用：`runtime/clip/lib/toon.js` 里的「豆子花叔」卡通形象（作者本人肖像，不在 MIT 内），角色一律换成喵叔头像。
+- 沙盒跑法：`bash /workspace/work/hf/env/setup.sh`，`export LD_LIBRARY_PATH=/tmp/libs/root/usr/lib/aarch64-linux-gnu OM_CHROME=/workspace/work/pw-browsers/chromium_headless_shell-1148/chrome-linux/headless_shell`，然后 `node /workspace/work/ext/hm/cli/om.js doctor`（2026-10-18 已跑通 new/still）。
