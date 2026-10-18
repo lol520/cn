@@ -421,3 +421,33 @@ description: 给 HyperFrames（或 Remotion）视频定“风格描述”。当�
 - 适合：轻松科普、理赔流程、「为什么被拒赔」类概念解释；小黑是 Ian 的 IP（作品署名要求保留出处），只作风格参考，画面里的角色用喵叔头像/猫，不直接搬小黑形象。成片目录新建 `08_手绘小黑` 一类的风格文件夹。
 
 **没找到公开版本**：doudou-knowledge-archive、artifact-template-cinematic-course-posters（应为私有或本地自建，需要的话从他电脑上传 Drive `05_工具包与skill`）。Remotion 系列、manim 有公开仓库，但当前主流程是 HyperFrames，暂不并入。
+
+## v9 增补（2026-10-18）：编辑风信息图（diagram-design，MIT）
+
+来源：`cathrynlavery/diagram-design`（MIT），本地副本 `/workspace/work/ext/dd/skills/diagram-design/`。它不是视频引擎，是**图表素材层**：每张图输出一个自带 SVG 的 HTML，嵌进 HyperFrames 当一屏，动画全部交给 GSAP 时间线。和 v1–v8 混搭，品牌、合规、去 AI 味规则照旧。
+
+**什么时候用**：一屏要讲清“结构/顺序/对比/占比”，用文字两条讲不清时。保险常用对照：
+- 理赔流程、核保流程、投保决策 → flowchart / process / swimlane（`type-flowchart.md`、`type-process.md`、`type-swimlane.md`）
+- 等待期、观察期、犹豫期、缴费期 → timeline / gantt
+- 产品多维对比 → radar（≤6 轴）/ quadrant（性价比 × 保障力度）
+- 保费怎么构成、现价怎么变化 → waterfall / bar / line（字幕避开“收益、回本”等违禁词）
+- 家庭保障配置优先级 → pyramid；保障范围重叠 → venn；家庭成员关系 → tree
+- 客户一次理赔的经历 → journey；保险公司前台后台分工 → service-blueprint
+- 一份保单拆开看（责任、免责、附加险）→ exploded（爆炸图，可和 #16 爆炸图拆解模板互补）
+
+**设计原则照搬**：一张图只用 1 个强调色、强调 1–2 个重点；1px 细线、不加阴影、圆角 ≤10px；所有坐标和间距是 4 的倍数；密度 4/10，能删的节点就删。动手前先问一句“看图比听一句话更明白吗？”，否则不画。
+
+**改成视频要做的三件事**
+1. 画布：它没有 9:16 预设，用 `fit` 或自定 viewBox `0 0 1080 1920`（横版 `0 0 1920 1080`，方形可用 `social-square`）。投屏字号档：节点名 ≥32px（1080 宽竖屏），中文字号下限按 12px×缩放比算，宁可减节点不缩字（detail 选 simplified ≤7 个节点）。
+2. 字体：默认 Instrument Serif / Geist 无中文。改 `references/style-guide.md` 的 token：标题、节点名都用本地打包的 Noto Sans SC（或思源黑体），sublabel 用 `'Geist Mono','Noto Sans Mono CJK SC',monospace`；font source 设 `system` 不走 Google Fonts，字体文件随工程本地打包。中文宽度按 1em/字预算。
+3. 配色：跑一次 onboarding 或手改 token，把当期模板的 hex（如藏青珊瑚、v1 各模板）映射到 paper / ink / muted / accent；accent 只给结论节点。可存成 profile（`~/.diagram-design/profiles/miaoshu.md`），多期复用。
+
+**动画怎么接**
+- 它自带的 motion（reveal/step/loop，CSS+自带控制器）**不用**，因为 HyperFrames 需要可逐帧确定的时间线。只取静态完整的 SVG（`?motion=static` 那一版或直接 none 模式）。
+- 给节点/连线加 `id` 或 `data-step="N"`，在 `window.__timelines["main"]` 里用 GSAP 按口播节奏逐个出现：节点 opacity+y≤8px、连线用 `pathLength=1` 的描边绘制、强调节点最后点亮 accent。每步最多 2 个元素一起进，跟字幕时间点对齐。
+- 末帧保持完整图停够 1.5 秒以上（可读状态要停够，v8 规则）。
+- 需要手写批注时叠 v8 的 hw-callout-circle / hw-arrow / marker-highlight。
+
+**交付前检查**：`python3 scripts/self_check.py <file> --offline` 过一遍；HyperFrames `snapshot` 截各步中点看中文换行、溢出、对比度；画面文字照常跑违禁词扫描。
+
+**不用它的场景**：列表（用 #20 编号清单）、前后对比（用 #4 对比擂台 / comparison-split）、单个大数字（用 #8 极简大字 / count-up）。
