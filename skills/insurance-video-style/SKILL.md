@@ -496,3 +496,12 @@ description: 给 HyperFrames（或 Remotion）视频定“风格描述”。当�
 - **镜像万花筒**（照片做万花筒旋转再还原）：只当转场，章节之间 ≤1 秒，保险内容里少用。
 
 **规则**：一条视频主风格 1 个（定配色和字体），各屏效果按内容从全部素材池里挑，不设数量上限，但同一个效果别连用到观众腻；测评和对比片的数字必须有来源，字幕照常跑违禁词扫描；照片类效果先确认素材授权。
+
+## v11 增补（2026-10-18）：动效库（fxlib）
+
+喵叔 2026-10-18：「做一个吧 这些东西以后都可以复用的」。v1–v10 里用过、写过的效果已经拆成单个可复用文件，共 95 个，按「这一屏要做的事」分 11 类：01_流程顺序 / 02_结构拆解 / 03_对比 / 04_结论数字 / 05_清单核对 / 06_开场抓眼 / 07_情绪故事 / 08_转场 / 09_字幕与口播包装 / 10_图表信息图 / 11_镜头运动。效果不绑视频类型，目录里「也适合」列出其他可用场景。
+- 位置：沙盒 `/workspace/work/fxlib/`；Google Drive「05_工具包与skill/动效库」folder ID `1BLzC3-TscNXk3rh2D1RKivbz90TB346X`（含 fxlib.zip 全量包、动效目录.md、index.html 画廊、contact_sheet.png 总览图）。
+- 每个效果一个文件夹：`effect.html`（单文件，所有可改文字/数字/颜色在顶部 CONFIG；一条 paused GSAP 时间线登记为 `window.__timelines["main"]`，可 seek；`?r=9x16` 竖屏重排、`?t=秒` 定格；onetake 用 `window.__seek(t)`）+ `preview.png` + `preview_9x16.png`。依赖 `_shared/`（gsap、Noto Sans/Serif SC 子集字体、头像、落款），拷走时一起拷或改路径。
+- **做视频前先查库**：按这一屏要做的事打开 `动效目录.md` / `index.html` 挑效果，复制对应 effect.html 改 CONFIG 再接进工程，库里没有的才手写。
+- **新效果回库**：每条视频交付后，把这期新做的效果按同样结构加回库（对应分类文件夹 + effect.html + preview.png + 目录一行；源码在 `_src/defs/*.fx`，`build.py` → `shot.py` → `gen_index.py`），再同步到 Drive「动效库」。
+- 规则照旧：示例文字已过违禁词表，真用时换成有来源+日期的数据；含分红数据标「演示利益，含不保证红利」；照片类效果（双重曝光、笔触重绘、照片马赛克、空间画廊、几何拼贴、半调网点、万花筒）素材需自有或授权。HyperFrames 规则：不用 Math.random（库里用确定性 rnd）、不用 from() + transformPerspective（seek 时不稳定）。
